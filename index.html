@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GK Practice — World & Nepal (100 Qs)</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="100 General Knowledge questions for government exam preparation: World & Nepal. Practice quiz with filters and scoring." />
+</head>
+<body>
+  <header class="container">
+    <h1>General Knowledge Practice — World & Nepal</h1>
+    <p class="sub">100 curated questions • Good for government exam preparation</p>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <div class="control-group">
+        <label>Category</label>
+        <div class="segmented">
+          <button class="seg active" data-cat="both">Both</button>
+          <button class="seg" data-cat="world">World</button>
+          <button class="seg" data-cat="nepal">Nepal</button>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label>Number of Questions</label>
+        <select id="questionCount">
+          <option value="10">10</option>
+          <option value="20" selected>20</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label>Mode</label>
+        <div class="segmented">
+          <button class="seg active" data-mode="practice">Practice (instant check)</button>
+          <button class="seg" data-mode="test">Test (check at end)</button>
+        </div>
+      </div>
+
+      <div class="control-row">
+        <button id="startBtn" class="primary">Start Quiz</button>
+        <button id="restartBtn" class="ghost" disabled>Restart</button>
+      </div>
+    </section>
+
+    <section id="quiz" class="quiz hidden">
+      <div class="quiz-top">
+        <div id="progress" class="progress"></div>
+        <div id="meta" class="meta"></div>
+      </div>
+
+      <div id="card" class="card">
+        <h2 id="qText">Question will appear here</h2>
+        <ul id="options" class="options"></ul>
+      </div>
+
+      <div class="actions">
+        <button id="prevBtn" class="ghost" disabled>Previous</button>
+        <button id="nextBtn" class="ghost" disabled>Next</button>
+        <button id="submitBtn" class="primary" disabled>Submit</button>
+      </div>
+    </section>
+
+    <section id="result" class="result hidden">
+      <h2>Your Result</h2>
+      <p id="scoreLine"></p>
+      <div id="review"></div>
+      <div class="control-row">
+        <button id="tryAgain" class="primary">Try Again</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>Made for quick practice. Host on GitHub Pages by committing these three files.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
